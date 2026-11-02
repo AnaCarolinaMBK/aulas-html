@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Cadastrados - Sistema SENAC</title>
+
+    <link rel="stylesheet" href="css/visual.css">
+</head>
+
+<body>
+
+    <a href="index.html" class="voltar">← Voltar</a>
+
+    <h2>Consultar Cadastrados</h2>
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Senha</th>
+                <th>Idade</th>
+                <th>Data de nascimento</th>
+                <th>Sexo</th>
+                <th>Interesses</th>
+                <th>Foto</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody id="listaUsuarios"></tbody>
+
+    </table>
+
+    <p id="mensagem"></p>
+
+    <br>
+
+    
+
+    <script>
+
+        // BUSCAR USUÁRIOS SALVOS
+
+        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        let tabela = document.getElementById("listaUsuarios");
+        let mensagem = document.getElementById("mensagem");
+
+
+        // MOSTRAR USUÁRIOS NA TABELA
+
+        function consultar() {
+
+            tabela.innerHTML = "";
+
+            if (usuarios.length === 0) {
+                mensagem.innerHTML = "Nenhum usuário cadastrado.";
+                return;
+            }
+
+            mensagem.innerHTML = "";
+
+            usuarios.forEach(function(usuario, indice) {
+
+                let linha = tabela.insertRow();
+
+                linha.insertCell(0).textContent = indice + 1;
+                linha.insertCell(1).textContent = usuario.nome;
+                linha.insertCell(2).textContent = usuario.email;
+                linha.insertCell(3).textContent = usuario.telefone;
+                linha.insertCell(4).textContent = "******";
+                linha.insertCell(5).textContent = usuario.idade;
+                linha.insertCell(6).textContent = usuario.data;
+                linha.insertCell(7).textContent = usuario.sexo;
+                linha.insertCell(8).textContent = usuario.interesses;
+                linha.insertCell(9).textContent = usuario.foto || "Não enviada";
+
+                let acao = linha.insertCell(10);
+
+                let botao = document.createElement("button");
+
+                botao.textContent = "Excluir";
+
+                botao.onclick = function() {
+                    excluir(indice);
+                };
+
+                acao.appendChild(botao);
+
+            });
+
+        }
+
+
+        // EXCLUIR CADASTRO
+
+        function excluir(indice) {
+
+            let confirmar = confirm("Deseja realmente excluir este cadastro?");
+
+            if (confirmar) {
+
+                usuarios.splice(indice, 1);
+
+                localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+                consultar();
+
+                alert("Cadastro excluído com sucesso!");
+
+            }
+
+        }
+
+
+        // EXECUTAR CONSULTA
+
+        consultar();
+
+    </script>
+
+</body>
+</html>

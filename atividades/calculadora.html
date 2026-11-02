@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora - Sistema Senac</title>
+    <link rel="stylesheet" href="css/visual.css">
+</head>
+<body>
+
+    <h2>Calculadora</h2>
+    
+    <a href="index.html" class="voltar">← Voltar</a>
+
+    <div class="calculadora">
+
+        <input type="text" id="visor" readonly>
+
+        <div class="botoes">
+
+            <button onclick="limpar()">C</button>
+            <button onclick="apagar()">←</button>
+            <button onclick="adicionar('/')">/</button>
+            <button onclick="adicionar('*')">*</button>
+
+            <button onclick="adicionar('7')">7</button>
+            <button onclick="adicionar('8')">8</button>
+            <button onclick="adicionar('9')">9</button>
+            <button onclick="adicionar('-')">-</button>
+
+            <button onclick="adicionar('4')">4</button>
+            <button onclick="adicionar('5')">5</button>
+            <button onclick="adicionar('6')">6</button>
+            <button onclick="adicionar('+')">+</button>
+
+            <button onclick="adicionar('1')">1</button>
+            <button onclick="adicionar('2')">2</button>
+            <button onclick="adicionar('3')">3</button>
+            <button class="igual" onclick="calcular()">=</button>
+
+            <button class="zero" onclick="adicionar('0')">0</button>
+            <button onclick="adicionar('.')">.</button>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    
+
+    <script>
+
+        function adicionar(valor) {
+            document.getElementById("visor").value += valor;
+        }
+
+        function limpar() {
+            document.getElementById("visor").value = "";
+        }
+
+        function apagar() {
+            let visor = document.getElementById("visor");
+            visor.value = visor.value.slice(0, -1);
+        }
+
+        function calcular() {
+            let visor = document.getElementById("visor");
+
+            try {
+                if (!/^[0-9+\-*/.() ]+$/.test(visor.value) || visor.value == "") {
+                    alert("Digite uma operação válida!");
+                    return;
+                }
+
+                visor.value = Function("return " + visor.value)();
+
+            } catch {
+                alert("Operação inválida!");
+                visor.value = "";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

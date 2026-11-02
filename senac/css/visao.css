@@ -1,0 +1,368 @@
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f5ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    color: #333333;
+}
+
+/* ===== TÍTULOS ===== */
+
+h1 {
+    background-color: #005baa;
+    color: white;
+    padding: 30px;
+    margin: 0;
+    font-size: 40px;
+}
+
+h2 {
+    color: #005baa;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #005baa;
+}
+
+/* ===== PARÁGRAFOS ===== */
+
+p {
+    color: #333333;
+    font-size: 24px;
+    margin-top: 50px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FORMULÁRIOS ===== */
+
+form {
+    background-color: white;
+    width: 320px;
+    max-width: 85%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    color: #005baa;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #005baa;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+button {
+    background-color: #005baa;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #003f7d;
+}
+
+input[type="submit"] {
+    background-color: #005baa;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="reset"] {
+    background-color: #777777;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+form p {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    box-shadow: none;
+    background-color: transparent;
+    color: #005baa;
+    font-size: 14px;
+}
+
+/* ===== LINKS ===== */
+
+a {
+    color: #005baa;
+}
+
+a:hover {
+    color: #003f7d;
+}
+
+/* ===== TELA DE CURSOS ===== */
+
+header {
+    background-color: #005baa;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 40px;
+    padding: 0;
+}
+
+header p {
+    color: white;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+main > p {
+    font-size: 18px;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 15px 0 30px;
+}
+
+section {
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+section h2 {
+    text-align: left;
+    border-bottom: 2px solid #005baa;
+    padding-bottom: 10px;
+}
+
+.curso {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    max-width: 100%;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.curso h3 {
+    color: #005baa;
+}
+
+.curso p {
+    width: auto;
+    padding: 0;
+    margin: 12px 0;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 15px;
+}
+
+.curso button {
+    margin-top: 10px;
+}
+
+/* ===== TELA INICIAL ===== */
+
+.inicio {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.apresentacao {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apresentacao h2 {
+    margin-top: 0;
+}
+
+.apresentacao p {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 18px;
+}
+
+.acessos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.acesso {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.acesso h3 {
+    color: #005baa;
+}
+
+.acesso p {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 16px;
+}
+
+.acesso a {
+    display: block;
+    background-color: #005baa;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.acesso a:hover {
+    background-color: #003f7d;
+    color: white;
+}
+
+/* ===== RODAPÉ ===== */
+
+footer {
+    background-color: #005baa;
+    color: white;
+    padding: 15px;
+}
+
+footer p {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* ===== AJUSTE PARA CELULAR ===== */
+
+@media (max-width: 600px) {
+
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    p {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .curso {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .inicio {
+        padding: 10px;
+    }
+
+    .acesso {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}

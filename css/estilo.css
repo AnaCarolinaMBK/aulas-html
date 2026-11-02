@@ -1,0 +1,213 @@
+body {
+    background-color: #f0f5ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    background-color: #005baa;
+    color: white;
+    padding: 30px;
+    margin: 0;
+    font-size: 40px;
+}
+
+p {
+    color: #333333;
+    font-size: 24px;
+    margin-top: 50px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+    color: #005baa;
+    margin-top: 40px;
+}
+
+form {
+    background-color: white;
+    width: 320px;
+    max-width: 85%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #005baa;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #003f7d;
+}
+
+form p {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    box-shadow: none;
+    background-color: transparent;
+    color: #005baa;
+    font-size: 14px;
+}
+
+
+
+
+/* ===== TELA DE CURSOS ===== */
+
+header {
+    background-color: #005baa;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 40px;
+    padding: 0;
+}
+
+header p {
+    color: white;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+main > p {
+    font-size: 18px;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 15px 0 30px;
+}
+
+section {
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+section h2 {
+    text-align: left;
+    border-bottom: 2px solid #005baa;
+    padding-bottom: 10px;
+}
+
+.curso {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 100%;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.curso h3 {
+    color: #005baa;
+}
+
+.curso p {
+    width: auto;
+    padding: 0;
+    margin: 12px 0;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 15px;
+}
+
+.curso button {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #005baa;
+    color: white;
+    padding: 15px;
+}
+
+footer p {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* ===== AJUSTE PARA CELULAR ===== */
+
+@media (max-width: 600px) {
+    header {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .curso {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 12px;
+    }
+}

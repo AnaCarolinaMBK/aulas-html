@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Aluno - SENAC</title>
+    <link rel="stylesheet" href="css/visao.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>SENAC</h1>
+        <p>Área do Aluno</p>
+        <nav>
+            <a href="#meus-cursos">Meus cursos</a>
+            <a href="#disponiveis">Cursos disponíveis</a>
+            <a href="index.html">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Bem-vinda à sua área de estudos!</h2>
+        <p>Acompanhe suas aulas e encontre novos cursos.</p>
+
+        <section id="meus-cursos">
+            <h2>Meus cursos em andamento</h2>
+
+            <article class="curso">
+                <h3>HTML e CSS</h3>
+                <p>Aprenda a criar páginas para a internet.</p>
+                <p><strong>Status:</strong> Em andamento</p>
+                <progress value="60" max="100"></progress>
+                <p>60% concluído</p>
+                <button type="button"
+                    onclick="alert('Aqui você poderá abrir as aulas do curso!')">
+                    Continuar curso
+                </button>
+            </article>
+
+            <article class="curso">
+                <h3>Informática Básica</h3>
+                <p>Aprenda os conceitos essenciais da informática.</p>
+                <p><strong>Status:</strong> Em andamento</p>
+                <progress value="30" max="100"></progress>
+                <p>30% concluído</p>
+                <button type="button"
+                    onclick="alert('Aqui você poderá abrir as aulas do curso!')">
+                    Continuar curso
+                </button>
+            </article>
+        </section>
+
+        <section id="disponiveis">
+            <h2>Cursos disponíveis para inscrição</h2>
+
+            <article class="curso">
+                <h3>Programação em Python</h3>
+                <p>Conheça a programação e desenvolva seus primeiros projetos.</p>
+                <p><strong>Modalidade:</strong> Online</p>
+                <button type="button"
+                    onclick="alert('Inscrição demonstrativa realizada!')">
+                    Inscrever-se
+                </button>
+            </article>
+
+            <article class="curso">
+                <h3>Excel Básico</h3>
+                <p>Aprenda a utilizar planilhas e organizar informações.</p>
+                <p><strong>Modalidade:</strong> Presencial</p>
+                <button type="button"
+                    onclick="alert('Inscrição demonstrativa realizada!')">
+                    Inscrever-se
+                </button>
+            </article>
+
+            <article class="curso">
+                <h3>Desenvolvimento Web</h3>
+                <p>Aprenda conceitos para desenvolver sites.</p>
+                <p><strong>Modalidade:</strong> Online</p>
+                <button type="button"
+                    onclick="alert('Inscrição demonstrativa realizada!')">
+                    Inscrever-se
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto acadêmico - SENAC</p>
+    </footer>
+
+</body>
+</html>

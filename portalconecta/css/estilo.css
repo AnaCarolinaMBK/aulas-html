@@ -1,0 +1,231 @@
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222222;
+    background-color: #F1F4F8;
+    line-height: 1.6;
+}
+
+a {
+    color: #1246AA;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #183153;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    color: #D6E9FF;
+    margin-bottom: 0;
+}
+
+/* Menu */
+nav {
+    background-color: #D9E8F5;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Conteúdo principal */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 25px;
+}
+
+.conteudo {
+    min-width: 0;
+}
+
+section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D9E2EC;
+}
+
+h2 {
+    color: #183153;
+}
+
+article {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #183153;
+    background-color: #F7FAFD;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+/* Agenda */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid #C5D2E0;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #D9E8F5;
+}
+
+/* Formulários */
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #AAB8C8;
+    border-radius: 4px;
+    font: inherit;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #183153;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #28517E;
+}
+
+.aviso {
+    font-size: 13px;
+    color: #596575;
+}
+
+/* Barra lateral */
+aside {
+    background-color: #EEF5FB;
+    padding: 15px;
+    min-width: 0;
+}
+
+aside section {
+    padding-bottom: 15px;
+}
+
+aside h2 {
+    font-size: 21px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #183153;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 5px 8px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+}
+
+
+.video-tiktok {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 9 / 16;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    background-color: #000;
+}
+
+
+
+
+.video-tiktok {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 9 / 16;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    border-radius: 12px;
+}
+
+
+

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Sistema Senac</title>
+    <link rel="stylesheet" href="css/visual.css">
+</head>
+<body>
+
+    <a href="index.html" class="voltar">← Voltar</a>
+
+    <h2>Login</h2>
+
+    
+<form>
+    <label for="usuario">Usuário:</label><br>
+    <input type="text" id="usuario" name="usuario"
+    placeholder="Digite seu usuário" required>
+    <br><br>
+
+    <label for="senha">Senha:</label><br>
+    <input type="password" id="senha" name="senha"
+    placeholder="Digite sua senha" required>
+    <br><br>
+
+    <button type="button" onclick="logar()">Entrar</button>
+
+    <input type="reset" value="Limpar">
+</form>
+
+
+    <br>
+    
+
+    <script>
+        function logar() {
+            let usuario = document.getElementById("usuario").value;
+            let senha = document.getElementById("senha").value;
+
+            if (usuario == "" || senha == "") {
+                alert("Preencha todos os campos!");
+            } else {
+                alert("Login realizado com sucesso!");
+            }
+        }
+    </script>
+
+</body>
+</html>
