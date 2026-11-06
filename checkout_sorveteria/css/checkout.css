@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --rosa: #f51b83;
+    --rosa-escuro: #e75480;
+    --rosa-claro: #fce0ee;
+    --fundo: #fff0f5;
+    --texto: #171717;
+    --borda: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 24px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f4f4f4;
+    color: var(--texto);
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.tela-checkout {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    min-height: 700px;
+    padding: 22px 24px 30px;
+    background: #fff;
+}
+
+.voltar {
+    display: inline-block;
+    color: #111;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.tela-checkout > h1 {
+    margin: -2px 0 14px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.etapas {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px auto 30px;
+    max-width: 290px;
+}
+
+.etapas > i {
+    width: 58px;
+    height: 1px;
+    margin-top: 13px;
+    background: #333;
+}
+
+.etapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-width: 48px;
+}
+
+.etapa > span {
+    width: 20px;
+    height: 26px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.etapa.ativa > span {
+    border-color: var(--rosa);
+    background: var(--rosa);
+}
+
+.etapa.concluida > span {
+    border-color: var(--rosa);
+    background: var(--rosa-claro);
+}
+
+.etapa small {
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.secao-endereco h2,
+.secao-pagamento h2,
+.secao-forma h2 {
+    margin-bottom: 9px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cartao-endereco {
+    min-height: 112px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 24px;
+    border: 1px solid #555;
+    outline: 2px solid #8ac7f5;
+    outline-offset: 1px;
+}
+
+.icone-local {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.cartao-endereco p {
+    margin: 0 0 17px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.link-editar {
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.secao-pagamento {
+    margin-top: 58px;
+}
+
+.opcao-pagamento {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 14px;
+    padding: 0 14px;
+    border: 1px solid #555;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.opcao-pagamento.selecionada {
+    border-color: #555;
+    background: var(--rosa-claro);
+}
+
+.opcao-pagamento input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-personalizado {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.selecionada .radio-personalizado {
+    border: 0;
+    background: var(--rosa);
+}
+
+.selecionada .radio-personalizado::after {
+    content: '✓';
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.opcao-pagamento.indisponivel {
+    color: #888;
+}
+
+.opcao-pagamento small {
+    margin-left: auto;
+    color: #222;
+    font-size: 9px;
+}
+
+.resumo-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 54px 8px 18px;
+    font-size: 12px;
+}
+
+.resumo-total strong {
+    font-weight: 500;
+}
+
+.botao-principal,
+.botao-secundario {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.botao-principal {
+    width: 100%;
+    border: 0;
+    background: var(--rosa);
+    color: #fff;
+}
+
+.tela-pagamento > h1 {
+    margin-bottom: 14px;
+}
+
+.tela-pagamento .etapas {
+    margin-bottom: 29px;
+}
+
+.secao-forma {
+    margin-bottom: 30px;
+}
+
+.pix-selecionado {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 18px;
+    border: 1px solid #555;
+    border-radius: 9px;
+    background: var(--rosa-claro);
+}
+
+.icone-pix,
+.pix-resumo span {
+    color: #70b9a9;
+    font-size: 22px;
+}
+
+.pix-selecionado strong,
+.pix-selecionado small {
+    display: block;
+}
+
+.pix-selecionado strong {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pix-selecionado small {
+    color: #777;
+    font-size: 10px;
+}
+
+.area-qr {
+    min-height: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 10px;
+    background: var(--rosa-claro);
+}
+
+.mini-qr {
+    font-size: 19px;
+    line-height: 1;
+}
+
+.area-qr p {
+    margin: 5px 0 8px;
+    font-size: 11px;
+}
+
+.qr-ilustrativo {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+    background-color: #fff;
+    background-image:
+        linear-gradient(90deg, #000 12px, transparent 12px),
+        linear-gradient(#000 12px, transparent 12px);
+    background-size: 24px 24px;
+    border: 7px solid #fff;
+}
+
+.qr-canto {
+    position: absolute;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    border: 9px solid #000;
+    background: #fff;
+}
+
+.qr-canto::after {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    background: #000;
+}
+
+.canto-1 { top: 0; left: 0; }
+.canto-2 { top: 0; right: 0; }
+.canto-3 { bottom: 0; left: 0; }
+
+.qr-miolo {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 27px;
+    height: 27px;
+    background: #000;
+}
+
+.botao-copiar {
+    margin-top: 9px;
+    padding: 7px 12px;
+    border: 1px solid #555;
+    background: #f5c6dc;
+    color: #111;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.aviso-pagamento {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 34px 10px 0;
+    padding: 12px 18px;
+    border: 1px solid #ffc5df;
+}
+
+.aviso-icone {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #111;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+.aviso-pagamento p {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.botao-confirmar {
+    margin-top: 22px;
+}
+
+.tela-confirmacao {
+    min-height: 700px;
+    padding-bottom: 90px;
+}
+
+.sucesso {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.icone-sucesso {
+    width: 116px;
+    height: 116px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--rosa);
+    color: #fff;
+    font-size: 65px;
+    font-weight: 300;
+}
+
+.sucesso h1 {
+    color: var(--rosa);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.sucesso p {
+    font-size: 12px;
+}
+
+.numero-pedido {
+    margin: 55px 8px 65px;
+    padding: 19px 10px;
+    border-radius: 9px;
+    background: var(--rosa-claro);
+    text-align: center;
+}
+
+.numero-pedido p {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.numero-pedido strong {
+    color: var(--rosa);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.resumo-confirmacao {
+    margin: 0 3px;
+    padding: 9px 12px;
+    border: 1px solid #555;
+}
+
+.resumo-confirmacao > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumo-confirmacao > div:first-child {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 10px;
+}
+
+.resumo-confirmacao strong {
+    font-size: 14px;
+}
+
+.pix-resumo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.acoes-confirmacao {
+    display: grid;
+    gap: 15px;
+    margin: 65px 0 0;
+}
+
+.botao-secundario {
+    border: 1px solid #555;
+    color: #111;
+}
+
+.menu-inferior {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #999;
+    background: #fffaf6;
+}
+
+.menu-inferior a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    color: #111;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.menu-inferior a span {
+    font-size: 21px;
+}
+
+.menu-inferior .menu-ativo {
+    color: var(--rosa);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+        background: #fff;
+    }
+
+    .tela-checkout {
+        min-height: 100vh;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .tela-confirmacao {
+        padding-bottom: 90px;
+    }
+}
