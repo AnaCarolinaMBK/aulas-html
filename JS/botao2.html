@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Eventos</title>
+</head>
+
+<body>
+
+    
+<h2>Mensagens a cada clique</h2>
+
+<button id="botaoMensagens">Clique para ver a mensagem</button>
+
+<p id="mensagemClique"></p>
+
+<script>
+
+    const botaoMensagens = document.getElementById("botaoMensagens");
+    const mensagemClique = document.getElementById("mensagemClique");
+
+    let clique = 0;
+
+    botaoMensagens.addEventListener("click", function() {
+
+        clique++;
+
+        if (clique == 1) {
+
+            mensagemClique.textContent = "Olá!";
+
+        } else if (clique == 2) {
+
+            mensagemClique.textContent = "Bem-vindo!";
+
+        } else if (clique == 3) {
+
+            mensagemClique.textContent = "Você está aprendendo JavaScript!";
+
+        } else {
+
+            mensagemClique.textContent = "Continue praticando JavaScript!";
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>

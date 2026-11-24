@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introdução ao JS - UC10</title>
+</head>
+
+<body>
+
+    <h1>Atividade prática - Introdução ao JavaScript</h1>
+
+    <script>
+
+        // =====================================
+        // 1. DADOS DO USUÁRIO
+        // =====================================
+
+        const nome = prompt("Qual o seu nome?");
+        let idade = Number(prompt("Qual sua idade?"));
+        const curso = prompt("Qual seu curso?");
+
+        console.log(nome);
+        console.log(idade);
+        console.log(curso);
+
+        let soma = idade + 5;
+
+        console.log("O usuário " + nome + " possui " + idade + " anos de idade.");
+
+        console.log("Olá, meu nome é " + nome + ", tenho " + idade + " anos e estou cursando " + curso + ".");
+
+        console.log("Daqui a 5 anos você terá " + soma + " anos.");
+
+
+        // =====================================
+        // 2. VERIFICAR IDADE PARA VOTAR
+        // =====================================
+
+        if (idade <= 16) {
+
+            console.log("Não pode votar");
+
+        } else if (idade == 17) {
+
+            console.log("Voto opcional");
+
+        } else {
+
+            console.log("Voto obrigatório");
+
+        }
+
+
+        // =====================================
+        // 3. SISTEMA SIMPLES DE LOGIN
+        // =====================================
+
+        const loginUsuario = prompt("Digite seu usuário:");
+        const senhaUsuario = prompt("Digite sua senha:");
+
+        if (loginUsuario == "admin" && senhaUsuario == "1234") {
+
+            console.log("Acesso permitido");
+
+        } else {
+
+            console.log("Acesso negado");
+
+        }
+
+
+        // =====================================
+        // 4. TABUADA DE 1 A 10
+        // =====================================
+
+        let numeroTabuada = Number(prompt("Digite um número inteiro para ver a tabuada:"));
+
+        for (let i = 1; i <= 10; i++) {
+
+            console.log(numeroTabuada + " x " + i + " = " + (numeroTabuada * i));
+
+        }
+
+
+        // =====================================
+        // 5. CONTAR NÚMEROS DIGITADOS
+        // =====================================
+
+        let numeroDigitado;
+        let contador = 0;
+
+        while (numeroDigitado != 0) {
+
+            numeroDigitado = Number(prompt("Digite um número (0 para parar):"));
+
+            if (numeroDigitado != 0) {
+
+                contador++;
+
+            }
+
+        }
+
+        console.log("Quantidade de números digitados: " + contador);
+
+
+        // =====================================
+        // 6. SISTEMA DE LOGIN COM 3 TENTATIVAS
+        // =====================================
+
+        let tentativas = 0;
+        let acesso = false;
+
+        while (tentativas < 3 && acesso == false) {
+
+            let login = prompt("Digite seu login:");
+            let senha = prompt("Digite sua senha:");
+
+            if (login == "admin" && senha == "1234") {
+
+                console.log("Acesso permitido");
+                acesso = true;
+
+            } else {
+
+                tentativas++;
+
+                console.log("Login ou senha incorretos!");
+
+            }
+
+        }
+
+        if (acesso == false) {
+
+            console.log("Acesso bloqueado");
+
+        }
+
+
+        // =====================================
+        // 7. FUNÇÃO PARA SOMAR DOIS NÚMEROS
+        // =====================================
+
+        function somar(numero1, numero2) {
+
+            return numero1 + numero2;
+
+        }
+
+        let resultadoSoma = somar(10, 5);
+
+        console.log("Resultado da soma: " + resultadoSoma);
+
+
+        // =====================================
+        // 8. FUNÇÃO DE BOAS-VINDAS
+        // =====================================
+
+        function darBoasVindas(nome) {
+
+            console.log("Bem-vindo(a), " + nome + "!");
+
+        }
+
+        darBoasVindas("Ana");
+
+
+        // =====================================
+        // 9. FUNÇÃO PARA CALCULAR MÉDIA
+        // =====================================
+
+        function calcularMedia(nota1, nota2) {
+
+            let media = (nota1 + nota2) / 2;
+
+            return media;
+
+        }
+
+        let primeiraNota = Number(prompt("Digite a primeira nota:"));
+        let segundaNota = Number(prompt("Digite a segunda nota:"));
+
+        let resultadoMedia = calcularMedia(primeiraNota, segundaNota);
+
+        console.log("Sua média é: " + resultadoMedia);
+
+        if (resultadoMedia >= 7) {
+
+            console.log("Aprovado");
+
+        } else if (resultadoMedia >= 5) {
+
+            console.log("Recuperação");
+
+        } else {
+
+            console.log("Reprovado");
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Eventos</title>
+</head>
+
+<body>
+
+    
+<h2>Sistema de ligar e desligar</h2>
+
+<button id="botaoLigar">Ligar</button>
+
+<button id="botaoDesligar">Desligar</button>
+
+<p id="statusSistema"></p>
+
+<script>
+
+    const botaoLigar = document.getElementById("botaoLigar");
+    const botaoDesligar = document.getElementById("botaoDesligar");
+    const statusSistema = document.getElementById("statusSistema");
+
+    botaoLigar.addEventListener("click", function() {
+
+        statusSistema.textContent = "Sistema ligado";
+
+    });
+
+    botaoDesligar.addEventListener("click", function() {
+
+        statusSistema.textContent = "Sistema desligado";
+
+    });
+
+</script>
+
+    
+
+</body>
+
+</html>

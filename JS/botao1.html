@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Eventos</title>
+</head>
+
+<body>
+
+    <h1>Teste de botões</h1>
+
+    <button id="botaoEvento">Clique aqui</button>
+
+    <p id="mensagemEvento"></p>
+
+    <script>
+
+        const botaoEvento = document.getElementById("botaoEvento");
+        const mensagemEvento = document.getElementById("mensagemEvento");
+
+        botaoEvento.addEventListener("click", function() {
+
+            mensagemEvento.textContent = "Evento executado com sucesso!";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
