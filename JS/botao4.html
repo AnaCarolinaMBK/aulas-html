@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercícios de Prática</title>
+</head>
+
+<body>
+
+    <h1>Exercícios de Prática</h1>
+
+    <hr>
+
+    <!-- EXERCÍCIO 1: BOAS-VINDAS -->
+
+    <h2>1. Boas-vindas</h2>
+
+    <input type="text" id="nome" placeholder="Digite seu nome">
+
+    <button id="botaoNome">Enviar</button>
+
+    <h2 id="mensagem"></h2>
+
+    <hr>
+
+    <!-- EXERCÍCIO 2: CONTADOR -->
+
+    <h2>2. Contador</h2>
+
+    <h2 id="numero">0</h2>
+
+    <button id="aumentar">Aumentar</button>
+
+    <button id="diminuir">Diminuir</button>
+
+    <hr>
+
+    <!-- EXERCÍCIO 3: LISTA DE TAREFAS -->
+
+    <h2>3. Lista de Tarefas</h2>
+
+    <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+
+    <button id="adicionar">Adicionar</button>
+
+    <ul id="lista"></ul>
+
+    <hr>
+
+    <!-- EXERCÍCIO 4: GALERIA DE CORES -->
+
+    <h2>4. Galeria Simples</h2>
+
+    <button id="vermelho">Vermelho</button>
+
+    <button id="azul">Azul</button>
+
+    <button id="verde">Verde</button>
+
+    <script>
+
+        // =====================================
+        // EXERCÍCIO 1 - BOAS-VINDAS
+        // =====================================
+
+        const nome = document.getElementById("nome");
+        const botaoNome = document.getElementById("botaoNome");
+        const mensagem = document.getElementById("mensagem");
+
+        botaoNome.addEventListener("click", function() {
+
+            mensagem.innerText = "Olá, " + nome.value + "!";
+
+        });
+
+
+        // =====================================
+        // EXERCÍCIO 2 - CONTADOR
+        // =====================================
+
+        let contador = 0;
+
+        const numero = document.getElementById("numero");
+        const aumentar = document.getElementById("aumentar");
+        const diminuir = document.getElementById("diminuir");
+
+        aumentar.addEventListener("click", function() {
+
+            contador++;
+
+            numero.innerText = contador;
+
+            if (contador > 0) {
+
+                numero.style.color = "blue";
+
+            }
+
+            else if (contador < 0) {
+
+                numero.style.color = "red";
+
+            }
+
+            else {
+
+                numero.style.color = "black";
+
+            }
+
+        });
+
+        diminuir.addEventListener("click", function() {
+
+            contador--;
+
+            numero.innerText = contador;
+
+            if (contador < 0) {
+
+                numero.style.color = "red";
+
+            }
+
+            else if (contador > 0) {
+
+                numero.style.color = "blue";
+
+            }
+
+            else {
+
+                numero.style.color = "black";
+
+            }
+
+        });
+
+
+        // =====================================
+        // EXERCÍCIO 3 - LISTA DE TAREFAS
+        // =====================================
+
+        const tarefa = document.getElementById("tarefa");
+        const adicionar = document.getElementById("adicionar");
+        const lista = document.getElementById("lista");
+
+        adicionar.addEventListener("click", function() {
+
+            const texto = tarefa.value;
+
+            const item = document.createElement("li");
+
+            item.innerText = texto;
+
+            lista.appendChild(item);
+
+            item.addEventListener("click", function() {
+
+                item.remove();
+
+            });
+
+            tarefa.value = "";
+
+        });
+
+
+        // =====================================
+        // EXERCÍCIO 4 - GALERIA DE CORES
+        // =====================================
+
+        const vermelho = document.getElementById("vermelho");
+        const azul = document.getElementById("azul");
+        const verde = document.getElementById("verde");
+
+        vermelho.addEventListener("click", function() {
+
+            document.body.style.backgroundColor = "red";
+
+        });
+
+        azul.addEventListener("click", function() {
+
+            document.body.style.backgroundColor = "blue";
+
+        });
+
+        verde.addEventListener("click", function() {
+
+            document.body.style.backgroundColor = "green";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
